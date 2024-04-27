@@ -1,26 +1,26 @@
-public abstract class Account {
-    private String accountNumber;
-    protected double balance;
+public abstract class Akun {
+    private String nomorAkun;
+    protected double saldo;
 
-    public Account(String accountNumber, double initialBalance) {
-        this.accountNumber = accountNumber;
-        this.balance = initialBalance;
+    public Akun(String nomorAkun, double saldoAwal) {
+        this.nomorAkun = nomorAkun;
+        this.saldo = saldoAwal;
     }
 
-    public String getAccountNumber() {
-        return accountNumber;
+    public String dapatkanNomorAkun() {
+        return nomorAkun;
     }
 
-    public double getBalance() {
-        return balance;
+    public double dapatkanSaldo() {
+        return saldo;
     }
 
-    public abstract void deposit(double amount);
+    public abstract void setor(double jumlah);
 
-    public abstract void withdraw(double amount);
+    public abstract void tarik(double jumlah);
 
     @Override
     public String toString() {
-        return "Account Number: " + accountNumber + "\nBalance: $" + balance;
+        return "Nomor Akun: " + nomorAkun + "\nSaldo: Rp" + saldo;
     }
 }
